@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Proses_Ana" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1713.6,24220" sap2010:WorkflowViewState.IdRef="Proses_Ana_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Proses_Ana" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1713.6,24350.4" sap2010:WorkflowViewState.IdRef="Proses_Ana_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -62,9 +62,10 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Proses_Ana" sap:VirtualizedContainerService.HintSize="1724,24155.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Proses_Ana" sap:VirtualizedContainerService.HintSize="1724,24285.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DatatablePersonelTakip" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
@@ -280,15 +281,9 @@
     </Sequence>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PersonelTakipDatatable workflow" sap:VirtualizedContainerService.HintSize="1682.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Proses\PersonelTakipDatatable.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_FilePathPersonelTakip">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilePathPersonelTakip_2" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfPersonelTakip">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SheetNameOfPersonelTakip_2" />
-        </InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DatatableOfPersonelTakip">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DatatablePersonelTakip" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePathPersonelTakip">[FilePathPersonelTakip_2]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfPersonelTakip">[SheetNameOfPersonelTakip_2]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DatatableOfPersonelTakip">[DatatablePersonelTakip]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -299,15 +294,9 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke HesapDatatable workflow" sap:VirtualizedContainerService.HintSize="1682.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Proses\HesapDatatable.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_FilePathHesap">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilePathHesap_2" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfHesap">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SheetNameOfHesap" />
-        </InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_HesapDatatable">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DatatableHesap" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePathHesap">[FilePathHesap_2]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfHesap">[SheetNameOfHesap]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_HesapDatatable">[DatatableHesap]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -318,15 +307,9 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GrupDatatable workflow" sap:VirtualizedContainerService.HintSize="1682.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Proses\GrupDatatable.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_FilePathHesap">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilePathHesap_2" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfGrup">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SheetNameOfGrup" />
-        </InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DatatableGrup">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="DatatableGrup" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePathHesap">[FilePathHesap_2]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfGrup">[SheetNameOfGrup]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DatatableGrup">[DatatableGrup]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LetterFileDatatable workflow" sap:VirtualizedContainerService.HintSize="1682.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Proses\LetterFileDatatable.xaml">
@@ -336,20 +319,20 @@
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DatatableOfLetter">[DatatableOfLetterFile]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="1682.4,115.2" sap2010:WorkflowViewState.IdRef="Comment_4" Text="TÜM EXCEL AKTİVİTELERİ VE HESAP DOSYASINDA YER BULMA VE RUN YAPILACAK GÜN BURADA BELİRLENİYOR VE GERÇEKLEŞİYOR" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="TÜM EXCEL AKTİVİTELERİ BURADA GERÇEKLEŞİYOR.:Excel Application Scope" sap:VirtualizedContainerService.HintSize="1682.4,21074.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[FilePathHesap_2]">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="1682.4,113.6" sap2010:WorkflowViewState.IdRef="Comment_4" Text="TÜM EXCEL AKTİVİTELERİ VE HESAP DOSYASINDA YER BULMA VE RUN YAPILACAK GÜN BURADA BELİRLENİYOR VE GERÇEKLEŞİYOR" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="TÜM EXCEL AKTİVİTELERİ BURADA GERÇEKLEŞİYOR.:Excel Application Scope" sap:VirtualizedContainerService.HintSize="1682.4,21073.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[FilePathHesap_2]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DatatablePersonelTakip]" DisplayName="Personel Dosyasından Verilerin alınması / Hesap Çizelgesinin Doldurulması - For Each Row in PersonelTakipDatatable" sap:VirtualizedContainerService.HintSize="1648.8,20964.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DatatablePersonelTakip]" DisplayName="Personel Dosyasından Verilerin alınması / Hesap Çizelgesinin Doldurulması - For Each Row in PersonelTakipDatatable" sap:VirtualizedContainerService.HintSize="1648.8,20964" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,20844" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,20843.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -426,7 +409,7 @@
                                         </ui:LookupDataTable.CellValue>
                                       </ui:LookupDataTable>
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652,88" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[Var_Grup_No.ToString +&quot; belirlendi.&quot;]" />
-                                      <If Condition="[NOT CurrentRow.Item(&quot;ADET&quot;).ToString = Nothing]" sap:VirtualizedContainerService.HintSize="652,302.4" sap2010:WorkflowViewState.IdRef="If_32">
+                                      <If Condition="[NOT CurrentRow.Item(&quot;ADET&quot;).ToString = Nothing and NOT CurrentRow.Item(&quot;IS TURU&quot;).ToString = &quot;KOKU TESTİ&quot;]" sap:VirtualizedContainerService.HintSize="652,302.4" sap2010:WorkflowViewState.IdRef="If_32">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -615,7 +598,7 @@
                                 </ui:LookupDataTable.CellValue>
                               </ui:LookupDataTable>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[(Var_Grup_No_Fm).ToString +&quot; belirlendi.&quot;]" />
-                              <If Condition="[Not CurrentRow.Item(&quot;ADET (FM)&quot;).ToString.Trim =  Nothing]" sap:VirtualizedContainerService.HintSize="652,312" sap2010:WorkflowViewState.IdRef="If_33">
+                              <If Condition="[Not CurrentRow.Item(&quot;ADET (FM)&quot;).ToString.Trim =  Nothing and Not CurrentRow.Item(&quot;IS TURU (FM)&quot;).ToString.Trim =  &quot;KOKU TESTİ&quot;]" sap:VirtualizedContainerService.HintSize="652,312" sap2010:WorkflowViewState.IdRef="If_33">
                                 <If.Then>
                                   <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -747,18 +730,10 @@
                   <ui:Comment sap:VirtualizedContainerService.HintSize="1573.6,76" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// KENDİME NOT: Buraya kadar try catch yapıldı." />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetCellIndexValue workflow" sap:VirtualizedContainerService.HintSize="1573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" Timeout="10.00:00:00" UnSafe="False" WorkflowFileName="Proses\GetCellIndexValue.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_FilePathHesap">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilePathHesap_2" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfHesap">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SheetNameOfHesap" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_SicilValue">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SicilValue" />
-                      </InArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_CellIndexValue">
-                        <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CellIndexValue" />
-                      </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_FilePathHesap">[FilePathHesap_2]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfHesap">[SheetNameOfHesap]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SicilValue">[SicilValue]</InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_CellIndexValue">[CellIndexValue]</OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -809,7 +784,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <ui:Comment sap:VirtualizedContainerService.HintSize="1573.6,95.2" sap2010:WorkflowViewState.IdRef="Comment_5" Text="HESAP TABLOSUNA İŞLENİCEK GÜN/TARİH BURADA BELİRLENİYOR.&#xA;KULLANIM DIŞI. CONFİG DEN ÇALIŞTIRILIYOR." />
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="1573.6,94.4" sap2010:WorkflowViewState.IdRef="Comment_5" Text="HESAP TABLOSUNA İŞLENİCEK GÜN/TARİH BURADA BELİRLENİYOR.&#xA;KULLANIM DIŞI. CONFİG DEN ÇALIŞTIRILIYOR." />
                   <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1573.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_103">
@@ -837,18 +812,10 @@
                   </ui:CommentOut>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetCellIndexNumber workflow" sap:VirtualizedContainerService.HintSize="1573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Proses\GetCellIndexNumber.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_FilePathLetterFile">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilePathLetterFile" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfSheetDateNumber">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SheetNameOfSheetDateNumber" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_DateDay">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DateNumber_2" />
-                      </InArgument>
-                      <OutArgument x:TypeArguments="x:Double" x:Key="out_CellIndexNumber">
-                        <mva:VisualBasicReference x:TypeArguments="x:Double" ExpressionText="CellIndexNumberDate" />
-                      </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_FilePathLetterFile">[FilePathLetterFile]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameOfSheetDateNumber">[SheetNameOfSheetDateNumber]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_DateDay">[DateNumber_2]</InArgument>
+                      <OutArgument x:TypeArguments="x:Double" x:Key="out_CellIndexNumber">[CellIndexNumberDate]</OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1573.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Date Cell Index Number başarıyla bulundu.&quot;]" />
@@ -922,7 +889,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="[SheetNameOfHesap]" Text="[Var_Adet]" />
                                 </Sequence>
-                                <If Condition="[Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_34">
+                                <If Condition="[Var_Adet = &quot;1&quot; and NOT String.IsNullOrEmpty(Var_Süre)]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_34">
                                   <If.Then>
                                     <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -1040,7 +1007,7 @@
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterGrup_FM + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="[SheetNameOfHesap]" Text="[Var_Grup_No_Fm.ToString]" />
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterSüre_FM + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="[SheetNameOfHesap]" Text="[Var_Sure_FM]" />
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt_FM + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="[SheetNameOfHesap]" Text="[Var_Adet_FM]" />
-                                      <If Condition="[Var_Adet_Fm = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_35">
+                                      <If Condition="[Var_Adet_Fm = &quot;1&quot; and NOT String.IsNullOrEmpty(Var_Sure_FM)]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_35">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_107">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -1120,7 +1087,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="[SheetNameOfHesap]" Text="[Var_Adet]" />
                                 </Sequence>
-                                <If Condition="[Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_36">
+                                <If Condition="[Var_Adet = &quot;1&quot; and NOT String.IsNullOrEmpty(Var_Süre)]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_36">
                                   <If.Then>
                                     <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_109">
                                       <Sequence.Variables>
@@ -1241,7 +1208,7 @@
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterGrup_FM + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="[SheetNameOfHesap]" Text="[Var_Grup_No_Fm.ToString]" />
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterSüre_FM + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="[SheetNameOfHesap]" Text="[Var_Sure_FM]" />
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt_FM + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="[SheetNameOfHesap]" Text="[Var_Adet_FM]" />
-                                      <If Condition="[Var_Adet_Fm =&quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_37">
+                                      <If Condition="[Var_Adet_Fm =&quot;1&quot; and NOT String.IsNullOrEmpty(Var_Sure_FM)]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_37">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_111">
                                             <Sequence.Variables>
@@ -1324,7 +1291,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_23" SheetName="[SheetNameOfHesap]" Text="[Var_Adet]" />
                                 </Sequence>
-                                <If Condition="[Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_38">
+                                <If Condition="[Var_Adet = &quot;1&quot; and NOT String.IsNullOrEmpty(Var_Süre)]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_38">
                                   <If.Then>
                                     <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_113">
                                       <Sequence.Variables>
@@ -1445,7 +1412,7 @@
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterGrup_FM + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_28" SheetName="[SheetNameOfHesap]" Text="[Var_Grup_No_Fm.ToString]" />
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterSüre_FM + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_29" SheetName="[SheetNameOfHesap]" Text="[Var_Sure_FM]" />
                                       <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt_FM + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_30" SheetName="[SheetNameOfHesap]" Text="[Var_Adet_FM]" />
-                                      <If Condition="[Var_Adet_Fm = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_39">
+                                      <If Condition="[Var_Adet_Fm = &quot;1&quot; and NOT String.IsNullOrEmpty(Var_Sure_FM)]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_39">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_115">
                                             <Sequence.Variables>
@@ -1521,5 +1488,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1682.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[DateNumber_2+ &quot; // Tarihli çalışma günü 2.ISL için tamamandı.&quot;]" />
   </Sequence>
 </Activity>
