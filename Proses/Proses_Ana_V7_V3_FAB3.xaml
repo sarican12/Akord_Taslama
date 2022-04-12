@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Proses_Ana" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1713.6,25325.6" sap2010:WorkflowViewState.IdRef="Proses_Ana_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Proses_Ana" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1713.6,24690.4" sap2010:WorkflowViewState.IdRef="Proses_Ana_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -62,10 +62,9 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Proses_Ana" sap:VirtualizedContainerService.HintSize="1724,25260.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Proses_Ana" sap:VirtualizedContainerService.HintSize="1724,24625.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DatatablePersonelTakip" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
@@ -319,27 +318,27 @@
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DatatableOfLetter">[DatatableOfLetterFile]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="1682.4,115.2" sap2010:WorkflowViewState.IdRef="Comment_4" Text="TÜM EXCEL AKTİVİTELERİ VE HESAP DOSYASINDA YER BULMA VE RUN YAPILACAK GÜN BURADA BELİRLENİYOR VE GERÇEKLEŞİYOR" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="TÜM EXCEL AKTİVİTELERİ BURADA GERÇEKLEŞİYOR.:Excel Application Scope" sap:VirtualizedContainerService.HintSize="1682.4,22047.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[FilePathHesap_3]">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="1682.4,113.6" sap2010:WorkflowViewState.IdRef="Comment_4" Text="TÜM EXCEL AKTİVİTELERİ VE HESAP DOSYASINDA YER BULMA VE RUN YAPILACAK GÜN BURADA BELİRLENİYOR VE GERÇEKLEŞİYOR" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="TÜM EXCEL AKTİVİTELERİ BURADA GERÇEKLEŞİYOR.:Excel Application Scope" sap:VirtualizedContainerService.HintSize="1682.4,21413.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[FilePathHesap_3]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DatatablePersonelTakip]" DisplayName="Personel Dosyasından Verilerin alınması / Hesap Çizelgesinin Doldurulması - For Each Row in PersonelTakipDatatable" sap:VirtualizedContainerService.HintSize="1648.8,21937.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DatatablePersonelTakip]" DisplayName="Personel Dosyasından Verilerin alınması / Hesap Çizelgesinin Doldurulması - For Each Row in PersonelTakipDatatable" sap:VirtualizedContainerService.HintSize="1648.8,21304" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,21816.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,21183.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If sap2010:Annotation.AnnotationText="SICIL SIRA DEĞERİ VAR İSE İŞLEMLER DEVAM EDER. YOK İSE DÖNGÜ SONLANIR." Condition="[NOT CurrentRow.Item(&quot;SICIL SIRA&quot;).ToString.Trim =  Nothing]" sap:VirtualizedContainerService.HintSize="1573.6,4872.8" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="SICIL SIRA DEĞERİ VAR İSE İŞLEMLER DEVAM EDER. YOK İSE DÖNGÜ SONLANIR." Condition="[NOT CurrentRow.Item(&quot;SICIL SIRA&quot;).ToString.Trim =  Nothing]" sap:VirtualizedContainerService.HintSize="1573.6,4635.2" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -348,7 +347,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="İŞLEMLER Sequence" sap:VirtualizedContainerService.HintSize="1154.4,4682.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence DisplayName="İŞLEMLER Sequence" sap:VirtualizedContainerService.HintSize="1154.4,4444.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -378,18 +377,26 @@
                             <InArgument x:TypeArguments="x:String">[CurrentRow.Item("SICIL SIRA").ToString.Trim]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1112.8,2852" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1112.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="Info" Message="[&quot;Çalışması yapılan personel sicili: &quot; +SicilValue]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1112.8,2481.6" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
                           <ui:IfElseIf.ConditionBlocks>
                             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                               <ui:IfElseIfBlock BlockType="If" Condition="[NOT CurrentRow.Item(&quot;IS TURU&quot;).ToString = Nothing]">
                                 <ui:IfElseIfBlock.Then>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="735.2,1151.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="735.2,780.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="693.6,1058.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="693.6,688" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -403,13 +410,54 @@
                                           <InArgument x:TypeArguments="x:String">[CurrentRow.Item("IS TURU").ToString]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[DatatableGrup]" DisplayName="Lookup Data Table - Var_Grup_No" sap:VirtualizedContainerService.HintSize="652,295.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="IS TURU" LookupValue="[Var_Is_Turu]" TargetColumnName="GRUP NO">
-                                        <ui:LookupDataTable.CellValue>
-                                          <OutArgument x:TypeArguments="x:Double">[Var_Grup_No]</OutArgument>
-                                        </ui:LookupDataTable.CellValue>
-                                      </ui:LookupDataTable>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652,88" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[Var_Grup_No.ToString +&quot; belirlendi.&quot;]" />
-                                      <If Condition="[NOT CurrentRow.Item(&quot;ADET&quot;).ToString = Nothing]" sap:VirtualizedContainerService.HintSize="652,302.4" sap2010:WorkflowViewState.IdRef="If_32">
+                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <TryCatch.Try>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,516" sap2010:WorkflowViewState.IdRef="Sequence_121">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[DatatableGrup]" DisplayName="Lookup Data Table - Var_Grup_No" sap:VirtualizedContainerService.HintSize="333.6,295.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="IS TURU" LookupValue="[Var_Is_Turu]" TargetColumnName="GRUP NO">
+                                              <ui:LookupDataTable.CellValue>
+                                                <OutArgument x:TypeArguments="x:Double">[Var_Grup_No]</OutArgument>
+                                              </ui:LookupDataTable.CellValue>
+                                            </ui:LookupDataTable>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[Var_Grup_No.ToString +&quot; belirlendi.&quot;]" />
+                                          </Sequence>
+                                        </TryCatch.Try>
+                                        <TryCatch.Catches>
+                                          <Catch x:TypeArguments="s:NullReferenceException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ActivityAction x:TypeArguments="s:NullReferenceException">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="s:NullReferenceException" Name="exception" />
+                                              </ActivityAction.Argument>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="375.2,243.2" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Throw Exception="[new exception(&quot;İş türü bilgisi, grup no ile işleşmedi.&quot;)]" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[exception.Message]" />
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </Catch>
+                                        </TryCatch.Catches>
+                                      </TryCatch>
+                                      <If Condition="[NOT CurrentRow.Item(&quot;IS TURU&quot;).ToString = &quot;KOKU TESTİ&quot; and NOT CurrentRow.Item(&quot;IS TURU&quot;).ToString = &quot;ÜRÜN KONTROL&quot;]" sap:VirtualizedContainerService.HintSize="652,302.4" sap2010:WorkflowViewState.IdRef="If_32">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -598,7 +646,7 @@
                                 </ui:LookupDataTable.CellValue>
                               </ui:LookupDataTable>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[(Var_Grup_No_Fm).ToString +&quot; belirlendi.&quot;]" />
-                              <If Condition="[Not CurrentRow.Item(&quot;ADET (FM)&quot;).ToString.Trim =  Nothing]" sap:VirtualizedContainerService.HintSize="652,312" sap2010:WorkflowViewState.IdRef="If_33">
+                              <If Condition="[NOT CurrentRow.Item(&quot;IS TURU&quot;).ToString = &quot;KOKU TESTİ&quot; and NOT CurrentRow.Item(&quot;IS TURU&quot;).ToString = &quot;ÜRÜN KONTROL&quot;]" sap:VirtualizedContainerService.HintSize="652,312" sap2010:WorkflowViewState.IdRef="If_33">
                                 <If.Then>
                                   <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -728,7 +776,7 @@
                     </If.Else>
                   </If>
                   <ui:Comment sap:VirtualizedContainerService.HintSize="1573.6,76" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// KENDİME NOT: Buraya kadar try catch yapıldı." />
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1573.6,583.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1573.6,187.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                     <TryCatch.Try>
                       <Sequence sap:VirtualizedContainerService.HintSize="375.2,339.2" sap2010:WorkflowViewState.IdRef="Sequence_117">
                         <sap:WorkflowViewStateService.ViewState>
@@ -761,10 +809,10 @@
                       </Sequence>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:ArgumentException" sap:VirtualizedContainerService.HintSize="400,418.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                      <Catch x:TypeArguments="s:ArgumentException" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -918,7 +966,6 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;X1 BAŞLANDI.&quot;]" />
-                                      <ui:ExcelWriteCell Cell="[CellIndexLetterX + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="[SheetNameOfHesap]" Text="[Var_XXX]" />
                                       <If Condition="[NOT String.IsNullOrEmpty(Var_Is_Turu)]" sap:VirtualizedContainerService.HintSize="560,350.4" sap2010:WorkflowViewState.IdRef="If_12">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
@@ -949,7 +996,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="[SheetNameOfHesap]" Text="[Var_Adet]" />
                                       </Sequence>
-                                      <If Condition="[Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_34">
+                                      <If Condition="[NOT String.IsNullOrEmpty(Var_Süre) and Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_34">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -1067,7 +1114,7 @@
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterGrup_FM + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="[SheetNameOfHesap]" Text="[Var_Grup_No_Fm.ToString]" />
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterSüre_FM + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="[SheetNameOfHesap]" Text="[Var_Sure_FM]" />
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt_FM + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="[SheetNameOfHesap]" Text="[Var_Adet_FM]" />
-                                            <If Condition="[Var_Adet_Fm = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_35">
+                                            <If Condition="[NOT String.IsNullOrEmpty(Var_Sure_FM) and Var_Adet_Fm = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_35">
                                               <If.Then>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_107">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -1102,6 +1149,7 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
+                                      <ui:ExcelWriteCell Cell="[CellIndexLetterX + CDbl(CellIndexNumberDate).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_37" SheetName="[SheetNameOfHesap]" Text="[Var_XXX]" />
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[&quot;X1 BİTTİ.&quot;]" />
                                     </Sequence>
                                   </ui:IfElseIfBlock.Then>
@@ -1118,7 +1166,6 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;X2 BAŞLANDI.&quot;]" />
-                                      <ui:ExcelWriteCell Cell="[CellIndexLetterX + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="[SheetNameOfHesap]" Text="[Var_XXX]" />
                                       <If Condition="[NOT String.IsNullOrEmpty(Var_Is_Turu)]" sap:VirtualizedContainerService.HintSize="560,350.4" sap2010:WorkflowViewState.IdRef="If_18">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_65">
@@ -1148,7 +1195,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="[SheetNameOfHesap]" Text="[Var_Adet]" />
                                       </Sequence>
-                                      <If Condition="[Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_36">
+                                      <If Condition="[NOT String.IsNullOrEmpty(Var_Süre) and Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_36">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_109">
                                             <Sequence.Variables>
@@ -1269,7 +1316,7 @@
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterGrup_FM + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="[SheetNameOfHesap]" Text="[Var_Grup_No_Fm.ToString]" />
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterSüre_FM + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="[SheetNameOfHesap]" Text="[Var_Sure_FM]" />
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt_FM + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="[SheetNameOfHesap]" Text="[Var_Adet_FM]" />
-                                            <If Condition="[Var_Adet_Fm =&quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_37">
+                                            <If Condition="[NOT String.IsNullOrEmpty(Var_Sure_FM) and Var_Adet_Fm = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_37">
                                               <If.Then>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_111">
                                                   <Sequence.Variables>
@@ -1307,6 +1354,7 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
+                                      <ui:ExcelWriteCell Cell="[CellIndexLetterX + (CDbl(CellIndexNumberDate)+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_38" SheetName="[SheetNameOfHesap]" Text="[Var_XXX]" />
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;X2 BİTTİ.&quot;]" />
                                     </Sequence>
                                   </ui:IfElseIfBlock.Then>
@@ -1323,7 +1371,6 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;X3 BAŞLANDI.&quot;]" />
-                                      <ui:ExcelWriteCell Cell="[CellIndexLetterX + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_21" SheetName="[SheetNameOfHesap]" Text="[Var_XXX]" />
                                       <If Condition="[NOT String.IsNullOrEmpty(Var_Is_Turu)]" sap:VirtualizedContainerService.HintSize="560,350.4" sap2010:WorkflowViewState.IdRef="If_25">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_80">
@@ -1353,7 +1400,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_23" SheetName="[SheetNameOfHesap]" Text="[Var_Adet]" />
                                       </Sequence>
-                                      <If Condition="[Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_38">
+                                      <If Condition="[NOT String.IsNullOrEmpty(Var_Süre) and Var_Adet = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="560,578.4" sap2010:WorkflowViewState.IdRef="If_38">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_113">
                                             <Sequence.Variables>
@@ -1474,7 +1521,7 @@
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterGrup_FM + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_28" SheetName="[SheetNameOfHesap]" Text="[Var_Grup_No_Fm.ToString]" />
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterSüre_FM + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_29" SheetName="[SheetNameOfHesap]" Text="[Var_Sure_FM]" />
                                             <ui:ExcelWriteCell Cell="[CellIndexLetterYapAdt_FM + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_30" SheetName="[SheetNameOfHesap]" Text="[Var_Adet_FM]" />
-                                            <If Condition="[Var_Adet_Fm = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_39">
+                                            <If Condition="[NOT String.IsNullOrEmpty(Var_Sure_FM) and Var_Adet_Fm = &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="483.2,578.4" sap2010:WorkflowViewState.IdRef="If_39">
                                               <If.Then>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_115">
                                                   <Sequence.Variables>
@@ -1512,6 +1559,7 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
+                                      <ui:ExcelWriteCell Cell="[CellIndexLetterX + (CDbl(CellIndexNumberDate)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_39" SheetName="[SheetNameOfHesap]" Text="[Var_XXX]" />
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Info" Message="[&quot;X3 BİTTİ.&quot;]" />
                                     </Sequence>
                                   </ui:IfElseIfBlock.Then>
