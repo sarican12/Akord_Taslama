@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Proses_Ana" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1713.6,25072" sap2010:WorkflowViewState.IdRef="Proses_Ana_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Proses_Ana" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1713.6,25074.4" sap2010:WorkflowViewState.IdRef="Proses_Ana_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -62,9 +62,10 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Proses_Ana" sap:VirtualizedContainerService.HintSize="1724,25007.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Proses_Ana" sap:VirtualizedContainerService.HintSize="1724,25009.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DatatablePersonelTakip" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
@@ -318,20 +319,20 @@
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DatatableOfLetter">[DatatableOfLetterFile]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="1682.4,113.6" sap2010:WorkflowViewState.IdRef="Comment_4" Text="TÜM EXCEL AKTİVİTELERİ VE HESAP DOSYASINDA YER BULMA VE RUN YAPILACAK GÜN BURADA BELİRLENİYOR VE GERÇEKLEŞİYOR" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="TÜM EXCEL AKTİVİTELERİ BURADA GERÇEKLEŞİYOR.:Excel Application Scope" sap:VirtualizedContainerService.HintSize="1682.4,21795.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[FilePathHesap_4]">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="1682.4,115.2" sap2010:WorkflowViewState.IdRef="Comment_4" Text="TÜM EXCEL AKTİVİTELERİ VE HESAP DOSYASINDA YER BULMA VE RUN YAPILACAK GÜN BURADA BELİRLENİYOR VE GERÇEKLEŞİYOR" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="TÜM EXCEL AKTİVİTELERİ BURADA GERÇEKLEŞİYOR.:Excel Application Scope" sap:VirtualizedContainerService.HintSize="1682.4,21796" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[FilePathHesap_4]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DatatablePersonelTakip]" DisplayName="Personel Dosyasından Verilerin alınması / Hesap Çizelgesinin Doldurulması - For Each Row in PersonelTakipDatatable" sap:VirtualizedContainerService.HintSize="1648.8,21685.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DatatablePersonelTakip]" DisplayName="Personel Dosyasından Verilerin alınması / Hesap Çizelgesinin Doldurulması - For Each Row in PersonelTakipDatatable" sap:VirtualizedContainerService.HintSize="1648.8,21686.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,21564.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,21565.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -775,7 +776,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:Comment sap:VirtualizedContainerService.HintSize="1573.6,75.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// KENDİME NOT: Buraya kadar try catch yapıldı." />
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="1573.6,76" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// KENDİME NOT: Buraya kadar try catch yapıldı." />
                   <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1573.6,570.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                     <TryCatch.Try>
                       <Sequence sap:VirtualizedContainerService.HintSize="375.2,339.2" sap2010:WorkflowViewState.IdRef="Sequence_117">
@@ -1628,6 +1629,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1682.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[DateNumber_4+ &quot; // Tarihli çalışma günü 1.ISL için tamamandı.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1682.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[DateNumber_4+ &quot; // Tarihli çalışma günü 4.ISL için tamamandı.&quot;]" />
   </Sequence>
 </Activity>
